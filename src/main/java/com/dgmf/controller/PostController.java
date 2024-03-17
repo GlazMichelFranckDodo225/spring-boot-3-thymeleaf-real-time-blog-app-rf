@@ -21,7 +21,7 @@ public class PostController {
     public String post(Model model) {
         // Retrieve List of PostDto
         List<PostDto> postDtos = postService.findAllPosts();
-        // Storing "postDtos" into the Model Object
+        // Store "postDtos" into the Model Object
         model.addAttribute("posts", postDtos);
         // Returns the Logical Thymeleaf View Name
         return "/admin/posts";
