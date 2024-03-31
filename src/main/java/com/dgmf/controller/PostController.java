@@ -15,7 +15,7 @@ import java.util.List;
 public class PostController {
     private final PostService postService;
 
-    // Handler Method for HTTP GET Request
+    // Handler Method for GET All Posts Request
     // ==> Returns Model and Logical View Name
     @GetMapping("/admin/posts")
     public String post(Model model) {
