@@ -24,6 +24,6 @@ public class PostController {
         // Store "postDtos" into the Model Object
         model.addAttribute("posts", postDtos);
         // Returns the Logical Thymeleaf View Name
-        return "/admin/posts";
+        return "admin/posts";
     }
 }
