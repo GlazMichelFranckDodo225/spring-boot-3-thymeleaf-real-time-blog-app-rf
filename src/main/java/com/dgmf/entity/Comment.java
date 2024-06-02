@@ -26,4 +26,9 @@ public class Comment {
     private LocalDateTime createdOn;
     @UpdateTimestamp
     private LocalDateTime updatedOn;
+    // Post ==> Parent/Owner / Comment ==> Child
+    @ManyToOne
+    // Foreign Key
+    @JoinColumn(name = "post_id", nullable = false)
+    private Post post;
 }
