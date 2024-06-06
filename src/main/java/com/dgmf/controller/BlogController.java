@@ -1,5 +1,6 @@
 package com.dgmf.controller;
 
+import com.dgmf.dto.CommentDto;
 import com.dgmf.dto.PostDto;
 import com.dgmf.service.PostService;
 import org.springframework.stereotype.Controller;
@@ -33,6 +34,11 @@ public class BlogController {
                             Model model){
         PostDto post = postService.findPostByUrl(postUrl);
         model.addAttribute("post", post);
+
+        // Empty CommentDto
+        CommentDto commentDto = new CommentDto();
+        model.addAttribute("comment", commentDto);
+
         return "blog/blog_post";
     }
 

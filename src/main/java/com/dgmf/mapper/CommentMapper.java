@@ -17,5 +17,5 @@ public class CommentMapper {
     // Convert Comment DTO to Comment Entity
     public Comment mapToCommentEntity(CommentDto commentDto) {
         return modelMapper.map(commentDto, Comment.class);
-    } 
+    }
 }
