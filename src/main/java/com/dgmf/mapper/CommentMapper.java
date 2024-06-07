@@ -4,8 +4,10 @@ import com.dgmf.dto.CommentDto;
 import com.dgmf.entity.Comment;
 import lombok.*;
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
+@Component
 public class CommentMapper {
     private final ModelMapper modelMapper;
 
