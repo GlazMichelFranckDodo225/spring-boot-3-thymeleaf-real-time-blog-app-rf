@@ -1,5 +1,7 @@
 package com.dgmf.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,8 +14,12 @@ import java.time.LocalDateTime;
 @Component
 public class CommentDto {
     private Long id;
+    @NotEmpty
     private String name;
+    @NotEmpty(message = "Email Should Not Be Empty or Null")
+    @Email
     private String email;
+    @NotEmpty(message = "Comment Body Should Not Be Empty")
     private String content;
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;
